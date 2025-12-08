@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rapport Système SecureTech</title>
+	<style>
+		body { font-family: Arial, sans-serif; margin: 20px; }
+		h1 { color: #2c3e50; }
+		.section { margin: 20px 0; padding: 15px; background: #ecf0f1; border-radius: 5px; }
+		.warning { color: #e74c3c; }
+		.success { color: #27ae60; }
+		table { border-collapse: collapse; width: 100%; }
+		th, td { border: 1px solid #bdc3c7; padding: 8px; text-align: left;
+}
+		th { background-color: #34495e; color: white; }
+	</style>
+</head>
+<body>
+	<h1>Rapport Systeme Consolide</h1>
+	<p>Genere le $(date)</p>
+	<div class="section">
+		<h2>Etat du Systeme</h2>
+		<p>Uptime: up 3 days, 2 hours, 15 minutes</p>
+		<p>Charge:  0,00, 0,00, 0,00</p>
+	</div>
+ <div class="section">
+ <h2>Taches Planifiees</h2>
+ <table>
+ <tr><th>Next</th><th>Left</th><th>Unit</th></tr>
+ <tr><td>Mon 2025-12-01</td><td>16:50:00</td><td>sysstat-collect.service</td></tr>
+ <tr><td>Mon 2025-12-01</td><td>16:56:35</td><td>disk-check.service</td></tr>
+ <tr><td>Mon 2025-12-01</td><td>16:57:28</td><td>fwupd-refresh.service</td></tr>
+ <tr><td>Mon 2025-12-01</td><td>23:18:01</td><td>apt-daily.service</td></tr>
+ <tr><td>Tue 2025-12-02</td><td>00:00:00</td><td>dpkg-db-backup.service</td></tr>
+ <tr><td>Tue 2025-12-02</td><td>00:00:00</td><td>sysstat-rotate.service</td></tr>
+ <tr><td>Tue 2025-12-02</td><td>00:01:41</td><td>logrotate.service</td></tr>
+ <tr><td>Tue 2025-12-02</td><td>00:07:00</td><td>sysstat-summary.service</td></tr>
+ <tr><td>Tue 2025-12-02</td><td>06:38:57</td><td>apt-daily-upgrade.service</td></tr>
+ <tr><td>Tue 2025-12-02</td><td>10:17:30</td><td>motd-news.service</td></tr>
+ </table>
+ </div>
+ <div class="section">
+ <h2>Alertes Recentes</h2>
+ <ul>
+ <li class="warning">/root/cron-lab/logs/disk-check.log:lun. 01 déc. 2025 15:55:45 CET: ALERTE - / utilise 49%</li>
+ <li class="warning">/root/cron-lab/logs/disk-check.log:lun. 01 déc. 2025 15:55:45 CET: ALERTE - /boot utilise 10%</li>
+ <li class="warning">/root/cron-lab/logs/disk-check.log:lun. 01 déc. 2025 16:26:35 CET: ALERTE - / utilise 49%</li>
+ <li class="warning">/root/cron-lab/logs/disk-check.log:lun. 01 déc. 2025 16:26:35 CET: ALERTE - /boot utilise 10%</li>
+ <li class="warning">/root/cron-lab/logs/disk-check.log:lun. 01 déc. 2025 16:30:02 CET: ALERTE - / utilise 49%</li>
+ <li class="warning">/root/cron-lab/logs/disk-check.log:lun. 01 déc. 2025 16:30:02 CET: ALERTE - /boot utilise 10%</li>
+ <li class="warning">/root/cron-lab/logs/security-updates.log:WARNING: apt does not have a stable CLI interface. Use with caution in scripts.</li>
+ <li class="warning">/root/cron-lab/logs/security-updates.log:WARNING: apt does not have a stable CLI interface. Use with caution in scripts.</li>
+ <li class="warning">/root/cron-lab/logs/security-updates.log:WARNING: apt does not have a stable CLI interface. Use with caution in scripts.</li>
+ <li class="warning">/root/cron-lab/logs/security-updates.log:WARNING: apt does not have a stable CLI interface. Use with caution in scripts.</li>
+ </ul>
+ </div>
+</body>
+</html>

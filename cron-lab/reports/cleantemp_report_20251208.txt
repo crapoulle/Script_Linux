@@ -1,0 +1,9 @@
+=== RAPPORT DE NETTOYAGE ===
+Date: lun. 08 déc. 2025 03:00:01 CET
+Espace utilisé avant: 5,1G
+
+--- Nettoyage de /tmp ---
+Fichiers temporaires supprimés
+
+=== RÉSUMÉ ===
+Espace utilisé après: 5,1G

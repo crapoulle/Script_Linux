@@ -1,0 +1,4 @@
+[2025-11-27 22:51:42] Début exécution de check-disk.sh
+[2025-11-27 22:51:42] check-disk.sh terminé avec succès
+[2025-11-27 22:55:51] Début exécution de check-service
+[2025-11-27 22:55:51] ERREUR - check-service a échoué (code: 127)

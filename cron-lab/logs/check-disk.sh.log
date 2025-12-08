@@ -1,0 +1,6 @@
+fini
+output = 
+usage = 10
+threshold = 5
+logfile = /root/cron-lab/logs/disk-check.log
+partition = /boot

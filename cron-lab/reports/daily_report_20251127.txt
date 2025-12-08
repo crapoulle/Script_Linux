@@ -1,0 +1,51 @@
+=== RAPPORT QUOTIDIEN ===
+Date: jeu. 27 nov. 2025 22:47:36 CET
+
+--- Uptime ---
+ 22:47:36 up 23:45,  2 users,  load average: 0,00, 0,00, 0,00
+
+--- Charge CPU ---
+top - 22:47:36 up 23:45,  2 users,  load average: 0,00, 0,00, 0,00
+Tasks: 204 total,   1 running, 203 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0,0 us,  9,1 sy,  0,0 ni, 90,9 id,  0,0 wa,  0,0 hi,  0,0 si,  0,0 st 
+MiB Mem :    457,6 total,     24,7 free,    204,7 used,    247,7 buff/cache     
+MiB Swap:   2179,0 total,   2172,2 free,      6,8 used.    253,0 avail Mem 
+
+--- Top 5 processus mémoire ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         422  0.0  6.5  63932 30812 ?        S<s  nov.26   0:00 /usr/lib/systemd/systemd-journald
+root         460  0.0  5.4 352744 25632 ?        SLsl nov.26   0:05 /sbin/multipathd -d -s
+root         877  0.0  4.2 110580 19764 ?        Ssl  nov.26   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root           1  0.0  2.8  22448 13280 ?        Ss   nov.26   0:02 /sbin/init
+root        4524  0.0  2.6  17892 12504 ?        Ss   22:16   0:00 sshd: groupe3 [priv]
+
+--- Espace disque ---
+Filesystem                         Size  Used Avail Use% Mounted on
+tmpfs                               46M  1,2M   45M   3% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv   12G  5,2G  5,5G  49% /
+tmpfs                              229M     0  229M   0% /dev/shm
+tmpfs                              5,0M     0  5,0M   0% /run/lock
+tmpfs                              1,0M     0  1,0M   0% /run/credentials/systemd-journald.service
+tmpfs                              1,0M     0  1,0M   0% /run/credentials/systemd-udev-load-credentials.service
+tmpfs                              1,0M     0  1,0M   0% /run/credentials/systemd-tmpfiles-setup-dev-early.service
+tmpfs                              1,0M     0  1,0M   0% /run/credentials/systemd-sysctl.service
+tmpfs                              1,0M     0  1,0M   0% /run/credentials/systemd-tmpfiles-setup-dev.service
+tmpfs                              229M     0  229M   0% /tmp
+/dev/sda2                          2,0G  167M  1,7G  10% /boot
+tmpfs                              1,0M     0  1,0M   0% /run/credentials/systemd-tmpfiles-setup.service
+tmpfs                              1,0M     0  1,0M   0% /run/credentials/systemd-networkd.service
+tmpfs                              1,0M     0  1,0M   0% /run/credentials/systemd-resolved.service
+tmpfs                              1,0M     0  1,0M   0% /run/credentials/getty@tty1.service
+tmpfs                               46M   12K   46M   1% /run/user/1000
+
+--- Connexions récentes ---
+groupe3  ssh          192.168.1.35     Thu Nov 27 22:16 - still logged in
+reboot   system boot  6.11.0-29-generi Wed Nov 26 23:02 - still running
+groupe3  ssh          192.168.1.35     Sat Nov 22 19:35 - 23:01 (4+03:26)
+testerus ssh          192.168.1.35     Sat Nov 22 19:08 - 23:01 (4+03:52)
+testerus ssh          192.168.1.35     Sat Nov 22 18:53 - 19:08  (00:15)
+groupe3  ssh          192.168.1.35     Sat Nov 22 18:50 - 19:34  (00:44)
+testerus ssh          192.168.1.35     Thu Nov 20 19:58 - 20:02 (2+00:03)
+groupe3  ssh          192.168.1.35     Thu Nov 20 19:47 - 20:11 (2+00:24)
+groupe3  ssh          192.168.1.35     Thu Nov 20 19:45 - 19:46  (00:01)
+reboot   system boot  6.11.0-29-generi Thu Nov 20 19:44 - 23:01 (6+03:16)

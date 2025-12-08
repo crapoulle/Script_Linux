@@ -1,0 +1,102 @@
+lun. 24 nov. 2025 22:05:50 CET: Début de la sauvegarde
+tar: Removing leading `/' from member names
+tar: /etc/gshadow: Cannot open: Permission denied
+tar: /etc/security/opasswd: Cannot open: Permission denied
+tar: /etc/gshadow-: Cannot open: Permission denied
+tar: /etc/ufw/user6.rules: Cannot open: Permission denied
+tar: /etc/ufw/before6.rules: Cannot open: Permission denied
+tar: /etc/ufw/before.rules: Cannot open: Permission denied
+tar: /etc/ufw/before.init: Cannot open: Permission denied
+tar: /etc/ufw/after.init: Cannot open: Permission denied
+tar: /etc/ufw/after6.rules: Cannot open: Permission denied
+tar: /etc/ufw/user.rules: Cannot open: Permission denied
+tar: /etc/ufw/after.rules: Cannot open: Permission denied
+tar: /etc/multipath: Cannot open: Permission denied
+tar: /etc/ssh/ssh_host_ecdsa_key: Cannot open: Permission denied
+tar: /etc/ssh/sshd_config.d/50-cloud-init.conf: Cannot open: Permission denied
+tar: /etc/ssh/ssh_host_rsa_key: Cannot open: Permission denied
+tar: /etc/ssh/ssh_host_ed25519_key: Cannot open: Permission denied
+tar: /etc/credstore.encrypted: Cannot open: Permission denied
+tar: /etc/fwupd/fwupd.conf: Cannot open: Permission denied
+tar: /etc/.pwd.lock: Cannot open: Permission denied
+tar: /etc/polkit-1/rules.d: Cannot open: Permission denied
+tar: /etc/cloud/cloud.cfg.d/99-installer.cfg: Cannot open: Permission denied
+tar: /etc/cloud/cloud.cfg.d/90-installer-network.cfg: Cannot open: Permission denied
+tar: /etc/sudoers: Cannot open: Permission denied
+tar: /etc/netplan/50-cloud-init.yaml: Cannot open: Permission denied
+tar: /etc/audit: Cannot open: Permission denied
+tar: /etc/ssl/private: Cannot open: Permission denied
+tar: /etc/iscsi/initiatorname.iscsi: Cannot open: Permission denied
+tar: /etc/credstore: Cannot open: Permission denied
+tar: /etc/sudoers.d/README: Cannot open: Permission denied
+tar: Exiting with failure status due to previous errors
+lun. 24 nov. 2025 22:05:50 CET: ERREUR lors de la sauvegarde
+lun. 24 nov. 2025 22:07:26 CET: Début de la sauvegarde
+tar: Removing leading `/' from member names
+tar: /etc/gshadow: Cannot open: Permission denied
+tar: /etc/security/opasswd: Cannot open: Permission denied
+tar: /etc/gshadow-: Cannot open: Permission denied
+tar: /etc/ufw/user6.rules: Cannot open: Permission denied
+tar: /etc/ufw/before6.rules: Cannot open: Permission denied
+tar: /etc/ufw/before.rules: Cannot open: Permission denied
+tar: /etc/ufw/before.init: Cannot open: Permission denied
+tar: /etc/ufw/after.init: Cannot open: Permission denied
+tar: /etc/ufw/after6.rules: Cannot open: Permission denied
+tar: /etc/ufw/user.rules: Cannot open: Permission denied
+tar: /etc/ufw/after.rules: Cannot open: Permission denied
+tar: /etc/multipath: Cannot open: Permission denied
+tar: /etc/ssh/ssh_host_ecdsa_key: Cannot open: Permission denied
+tar: /etc/ssh/sshd_config.d/50-cloud-init.conf: Cannot open: Permission denied
+tar: /etc/ssh/ssh_host_rsa_key: Cannot open: Permission denied
+tar: /etc/ssh/ssh_host_ed25519_key: Cannot open: Permission denied
+tar: /etc/credstore.encrypted: Cannot open: Permission denied
+tar: /etc/fwupd/fwupd.conf: Cannot open: Permission denied
+tar: /etc/.pwd.lock: Cannot open: Permission denied
+tar: /etc/polkit-1/rules.d: Cannot open: Permission denied
+tar: /etc/cloud/cloud.cfg.d/99-installer.cfg: Cannot open: Permission denied
+tar: /etc/cloud/cloud.cfg.d/90-installer-network.cfg: Cannot open: Permission denied
+tar: /etc/sudoers: Cannot open: Permission denied
+tar: /etc/netplan/50-cloud-init.yaml: Cannot open: Permission denied
+tar: /etc/audit: Cannot open: Permission denied
+tar: /etc/ssl/private: Cannot open: Permission denied
+tar: /etc/iscsi/initiatorname.iscsi: Cannot open: Permission denied
+tar: /etc/credstore: Cannot open: Permission denied
+tar: /etc/sudoers.d/README: Cannot open: Permission denied
+tar: Exiting with failure status due to previous errors
+lun. 24 nov. 2025 22:07:26 CET: ERREUR lors de la sauvegarde
+lun. 24 nov. 2025 22:08:31 CET: Début de la sauvegarde
+tar: Removing leading `/' from member names
+lun. 24 nov. 2025 22:08:31 CET: Sauvegarde réussie - etc_backup_20251124_220831.tar.gz
+lun. 24 nov. 2025 22:08:31 CET: Nettoyage effectué
+mar. 25 nov. 2025 02:00:01 CET: Début de la sauvegarde
+tar: Removing leading `/' from member names
+mar. 25 nov. 2025 02:00:01 CET: Sauvegarde réussie - etc_backup_20251125_020001.tar.gz
+mar. 25 nov. 2025 02:00:01 CET: Nettoyage effectué
+mer. 26 nov. 2025 02:00:01 CET: Début de la sauvegarde
+tar: Removing leading `/' from member names
+mer. 26 nov. 2025 02:00:01 CET: Sauvegarde réussie - etc_backup_20251126_020001.tar.gz
+mer. 26 nov. 2025 02:00:01 CET: Nettoyage effectué
+jeu. 27 nov. 2025 02:00:01 CET: Début de la sauvegarde
+tar: Removing leading `/' from member names
+jeu. 27 nov. 2025 02:00:02 CET: Sauvegarde réussie - etc_backup_20251127_020001.tar.gz
+jeu. 27 nov. 2025 02:00:02 CET: Nettoyage effectué
+jeu. 27 nov. 2025 22:38:29 CET: Début de la sauvegarde
+tar: Removing leading `/' from member names
+jeu. 27 nov. 2025 22:38:29 CET: Sauvegarde réussie - etc_backup_20251127_223829.tar.gz
+jeu. 27 nov. 2025 22:38:29 CET: Nettoyage effectué
+ven. 28 nov. 2025 02:00:01 CET: Début de la sauvegarde
+tar: Removing leading `/' from member names
+ven. 28 nov. 2025 02:00:01 CET: Sauvegarde réussie - etc_backup_20251128_020001.tar.gz
+ven. 28 nov. 2025 02:00:01 CET: Nettoyage effectué
+sam. 29 nov. 2025 02:00:01 CET: Début de la sauvegarde
+tar: Removing leading `/' from member names
+sam. 29 nov. 2025 02:00:01 CET: Sauvegarde réussie - etc_backup_20251129_020001.tar.gz
+sam. 29 nov. 2025 02:00:01 CET: Nettoyage effectué
+dim. 30 nov. 2025 02:00:01 CET: Début de la sauvegarde
+tar: Removing leading `/' from member names
+dim. 30 nov. 2025 02:00:02 CET: Sauvegarde réussie - etc_backup_20251130_020001.tar.gz
+dim. 30 nov. 2025 02:00:02 CET: Nettoyage effectué
+lun. 01 déc. 2025 02:00:01 CET: Début de la sauvegarde
+tar: Removing leading `/' from member names
+lun. 01 déc. 2025 02:00:02 CET: Sauvegarde réussie - etc_backup_20251201_020001.tar.gz
+lun. 01 déc. 2025 02:00:02 CET: Nettoyage effectué

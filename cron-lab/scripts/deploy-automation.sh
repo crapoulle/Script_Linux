@@ -1,0 +1,46 @@
+#!/bin/bash
+# deploy-automation.sh
+
+echo "Déploiement de l'infrastructure d'automatisation..."
+
+# Créer la structure
+mkdir -p /root/cron-lab/{scripts/{backup,monitoring,maintenance,reporting},logs,backup,reports,config}
+
+
+# Copier les scripts
+# [À COMPLÉTER]
+
+
+# Configurer les crons
+cat > /root/cron-lab/config/crontab.txt << 'EOF'
+
+# Monitoring
+*/15 * * * * /root/cron-lab/scripts/monitoring/check-disk.sh
+*/5 * * * * /root/cron-lab/scripts/monitoring/check-services.sh
+*/30 * * * * /root/cron-lab/scripts/monitoring/check-load.sh
+
+# Sauvegardes
+0 */6 * * * /root/cron-lab/scripts/backup/incremental-backup.sh
+0 1 * * 0 /root/cron-lab/scripts/backup/full-backup.sh
+
+# Maintenance
+0 3 * * * /root/cron-lab/scripts/maintenance/clean-temp.sh
+0 4 * * 3 /root/cron-lab/scripts/maintenance/security-updates.sh
+30 23 * * * /root/cron-lab/scripts/maintenance/rotate-logs.sh
+
+# Reporting
+0 8 * * 1-5 /root/cron-lab/scripts/reporting/daily-report.sh
+0 9 * * 1 /root/cron-lab/scripts/reporting/weekly-report.sh
+EOF
+
+# Installer les crons
+crontab /root/cron-lab/config/crontab.txt
+
+# Configurer les timers systemd
+# [À COMPLÉTER]
+
+
+echo "Déploiement terminé!"
+echo "Vérifier avec: crontab -l"
+
+echo " : systemctl list-timers"
