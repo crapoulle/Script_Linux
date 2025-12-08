@@ -1,0 +1,85 @@
+# Ce fichier viminfo a été généré par Vim 9.1.
+# Vous pouvez l'éditer, mais soyez prudent.
+
+# Viminfo version
+|1,4
+
+# 'encoding' dans lequel ce fichier a été écrit
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# Historique ligne de commande (chronologie décroissante) :
+
+# Historique chaîne de recherche (chronologie décroissante) :
+
+# Historique expression (chronologie décroissante) :
+
+# Historique ligne de saisie (chronologie décroissante) :
+
+# Historique Ligne de débogage (chronologie décroissante) :
+
+# Registres :
+
+# Marques dans le fichier :
+'0  3  0  /tmp/bash-fc.TC3Eqn
+|4,48,3,0,1764194507,"/tmp/bash-fc.TC3Eqn"
+'1  23  0  /tmp/crontab.Xq7RNl/crontab
+|4,49,23,0,1764194506,"/tmp/crontab.Xq7RNl/crontab"
+'2  23  1  /tmp/crontab.alPgum/crontab
+|4,50,23,1,1763661121,"/tmp/crontab.alPgum/crontab"
+'3  6  0  /tmp/crontab.ZuKJS5/crontab
+|4,51,6,0,1763661121,"/tmp/crontab.ZuKJS5/crontab"
+
+# Liste de sauts (le plus récent en premier) :
+-'  3  0  /tmp/bash-fc.TC3Eqn
+|4,39,3,0,1764194507,"/tmp/bash-fc.TC3Eqn"
+-'  23  0  /tmp/crontab.Xq7RNl/crontab
+|4,39,23,0,1764194506,"/tmp/crontab.Xq7RNl/crontab"
+-'  1  0  /tmp/crontab.Xq7RNl/crontab
+|4,39,1,0,1764017784,"/tmp/crontab.Xq7RNl/crontab"
+-'  1  0  /tmp/bash-fc.TC3Eqn
+|4,39,1,0,1764017454,"/tmp/bash-fc.TC3Eqn"
+-'  23  1  /tmp/crontab.alPgum/crontab
+|4,39,23,1,1763661121,"/tmp/crontab.alPgum/crontab"
+-'  6  0  /tmp/crontab.ZuKJS5/crontab
+|4,39,6,0,1763661121,"/tmp/crontab.ZuKJS5/crontab"
+-'  23  1  /tmp/crontab.alPgum/crontab
+|4,39,23,1,1763661121,"/tmp/crontab.alPgum/crontab"
+-'  6  0  /tmp/crontab.ZuKJS5/crontab
+|4,39,6,0,1763661121,"/tmp/crontab.ZuKJS5/crontab"
+-'  23  1  /tmp/crontab.alPgum/crontab
+|4,39,23,1,1763661121,"/tmp/crontab.alPgum/crontab"
+-'  6  0  /tmp/crontab.ZuKJS5/crontab
+|4,39,6,0,1763661121,"/tmp/crontab.ZuKJS5/crontab"
+-'  1  0  /tmp/crontab.ZuKJS5/crontab
+|4,39,1,0,1763659872,"/tmp/crontab.ZuKJS5/crontab"
+-'  1  0  /tmp/crontab.ZuKJS5/crontab
+|4,39,1,0,1763659872,"/tmp/crontab.ZuKJS5/crontab"
+-'  1  0  /tmp/crontab.ZuKJS5/crontab
+|4,39,1,0,1763659872,"/tmp/crontab.ZuKJS5/crontab"
+-'  1  0  /tmp/crontab.alPgum/crontab
+|4,39,1,0,1763659810,"/tmp/crontab.alPgum/crontab"
+-'  1  0  /tmp/crontab.alPgum/crontab
+|4,39,1,0,1763659810,"/tmp/crontab.alPgum/crontab"
+-'  1  0  /tmp/crontab.alPgum/crontab
+|4,39,1,0,1763659810,"/tmp/crontab.alPgum/crontab"
+
+# Historique des marques dans les fichiers (les plus récentes en premier) :
+
+> /tmp/bash-fc.TC3Eqn
+	*	1764194507	0
+	"	3	0
+
+> /tmp/crontab.Xq7RNl/crontab
+	*	1764194506	0
+	"	23	0
+
+> /tmp/crontab.ZuKJS5/crontab
+	*	1763661121	0
+	"	6	0
+
+> /tmp/crontab.alPgum/crontab
+	*	1763661121	0
+	"	23	1
