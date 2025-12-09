@@ -1,0 +1,6 @@
+john:1001:standard_users:John Doe
+Jane:1002:standard_users:Jane Smith
+bob:1003:standard_users:Bob Wilson
+# alice:1004:admins:Alice Brown 
+mike:1005:standard_users:Mike Johnson
+
