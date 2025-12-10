@@ -125,47 +125,49 @@ function New-EfreiUser {
 
 # === SCRIPT D'IMPORT CSV ===
 function Import-UsersFromCSV {
-	param(
-		[string]$CSVPath = "C:\Import\users.csv",
-		[string]$GroupNumber = "3"
-	)
+    param(
+        [string]$CSVPath = "C:\Import\users.csv",
+        [string]$GroupNumber = "3"
+    )
 
-	if (-not (Test-Path $CSVPath)) {
-		Write-Host "Fichier CSV introuvable : $CSVPath" -ForegroundColor Red
-	return
-	}
+    # Vérification de l'existence du fichier
+    if (-not (Test-Path $CSVPath)) {
+        Write-Host "Fichier CSV introuvable : $CSVPath" -ForegroundColor Red
+        return
+    }
 
-	$users = Import-Csv $CSVPath
-	$results = @()
+    # Import des utilisateurs
+    $users = Import-Csv -Path $CSVPath
+    $results = @()
 
-	foreach ($user in $users) {
-		Write-Host "`nTraitement : $($user.FirstName) $($user.LastName)" -ForegroundColor Yellow
+    foreach ($user in $users) {
+        Write-Host "`nTraitement : $($user.FirstName) $($user.LastName)" -ForegroundColor Yellow
 
-		$params = @{
-			FirstName = $user.FirstName
-			LastName = $user.LastName
-			Department = $user.Department
-			Role = $user.Role
-			GroupNumber = $GroupNumber
-		}
+        # Paramètres obligatoires
+        $params = @{
+            FirstName   = $user.FirstName
+            LastName    = $user.LastName
+            Department  = $user.Department
+            Role        = $user.Role
+            GroupNumber = $GroupNumber
+        }
 
+        # Paramètres optionnels
+        if ($user.Manager) { $params.Manager = $user.Manager }
+        if ($user.Mobile) { $params.Mobile = $user.Mobile }
 
-	if ($user.Manager) { $params.Manager = $user.Manager }
-	if ($user.Mobile) { $params.Mobile = $user.Mobile }
+        # Appel de la fonction de création
+        $result = New-EfreiUser @params
+        $results += $result
+    }
 
-	$result = New-EfreiUser @params
-	$results += $result
-	}
+    # Génération du rapport
+    $reportPath = "C:\Import\Import_Report_$(Get-Date -Format 'yyyyMMdd_HHmmss').csv"
+    $results | Export-Csv -Path $reportPath -NoTypeInformation
 
-
-
-	# Générer un rapport
-
-	$reportPath = "C:\Import\Import_Report_$(Get-Date -Format 'yyyyMMdd_HHmmss').csv"
-	$results | Export-Csv $reportPath -NoTypeInformation
-
-	Write-Host "Import terminé. Rapport : $reportPath" -ForegroundColor Green
+    Write-Host "Import terminé. Rapport : $reportPath" -ForegroundColor Green
 }
+
 
 
 
