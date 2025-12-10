@@ -1,31 +1,30 @@
 # === FONCTION DE CRÉATION D'UTILISATEUR AVANCÉE ===
 
 $GroupNumber = "3"
-$CSVPath = "C:\Import\users.csv"
-
-Write-Host ""
-Write-Host "test"
 
 function New-EfreiUser {
 	param(
-		[Parameter(Mandatory=$true)]$FirstName,
-		[Parameter(Mandatory=$true)]$LastName,
-		[Parameter(Mandatory=$true)][ValidateSet("IT","Finance","RH","Direction","Commercial","Production")]$Department,
-		[Parameter(Mandatory=$false)][ValidateSet("Manager","Senior","Junior","Stagiaire")]$Role = "Junior",
-		[Parameter(Mandatory=$false)]$Manager,
-		[Parameter(Mandatory=$false)]$Mobile,
-		[Parameter(Mandatory=$false)]$GroupNumber = "3"
+		[Parameter(Mandatory=$true)][string]$FirstName,
+		[Parameter(Mandatory=$true)][string]$LastName,
+		[Parameter(Mandatory=$true)][ValidateSet("IT","Finance","RH","Direction","Commercial","Production")][string]$Department,
+		[Parameter(Mandatory=$false)][ValidateSet("Manager","Senior","Junior","Stagiaire")][string]$Role,
+		[Parameter(Mandatory=$false)][string]$Manager,
+		[Parameter(Mandatory=$false)][string]$Mobile,
+		[Parameter(Mandatory=$false)][string]$GroupNumber = "3"
 	)
 
-	Write-Host "firtname = $FirstName"
-	Write-Host "LASTname = $LastName"
+	Write-Host "FirstName = $FirstName"
+	Write-Host "LastName = $LastName"
+	Write-Host "Department = $Department"
+	Write-Host "Role = $Role"
 
 	# Générer le login
 	$cleanFirst = $FirstName.ToLower() -replace "[éèêë]","e" -replace "[àâä]","a" -replace "[^a-z]",""
 	$cleanLast = $LastName.ToLower() -replace "[éèêë]","e" -replace "[àâä]","a" -replace "[^a-z]",""
 	$baseLogin = "$($cleanFirst[0]).$cleanLast"
 
-
+	Write-Host "cleanfirst = $cleanFirst"
+	Write-Host "cleanLast = $cleanLast"
 	Write-Host "baseLogin = $baseLogin"
 
 	# Vérifier l'unicité
@@ -50,12 +49,12 @@ function New-EfreiUser {
 		Surname = $LastName
 		DisplayName = "$LastName $FirstName".ToUpper()
 		SamAccountName = $login
-		UserPrincipalName = "$login@efreiG$GroupNumber.local"
-		EmailAddress = "$login@efreiG$GroupNumber.local"
+		UserPrincipalName = "$login@efreiG3.local"
+		EmailAddress = "$login@efreiG3.local"
 		Department = $Department
 		Title = "$Role - $Department"
-		Description = "Créé le $(Get-Date -Format 'dd/MM/yyyy') - $Role - $Department"
-		AccountPassword = (ConvertTo-SecureString "Welcome@G$GroupNumber!" -AsPlainText -Force)
+		Description = "Cree le $(Get-Date -Format 'dd/MM/yyyy') - $Role - $Department"
+		AccountPassword = (ConvertTo-SecureString "Welcome@efreiG3!" -AsPlainText -Force)
 		Enabled = $true
 		ChangePasswordAtLogon = $true
 		Path = $userPath
@@ -89,7 +88,7 @@ function New-EfreiUser {
 
 
 	# Créer le dossier personnel
-	$homeBase = "C:\Homes\$GroupNumber"
+	$homeBase = "C:\Homes\EFREI_G$GroupNumber"
 	if (-not (Test-Path $homeBase)) {
 		New-Item -Path $homeBase -ItemType Directory -Force
 	}
@@ -121,53 +120,47 @@ function New-EfreiUser {
 }
 
 
-
-
 # === SCRIPT D'IMPORT CSV ===
 function Import-UsersFromCSV {
-    param(
-        [string]$CSVPath = "C:\Import\users.csv",
-        [string]$GroupNumber = "3"
-    )
+	param(
+		[string]$CSVPath = "C:\Import\users.csv"
+	)
 
-    # Vérification de l'existence du fichier
-    if (-not (Test-Path $CSVPath)) {
-        Write-Host "Fichier CSV introuvable : $CSVPath" -ForegroundColor Red
-        return
-    }
+	if (-not (Test-Path $CSVPath)) {
+		Write-Host "Fichier CSV introuvable : $CSVPath" -ForegroundColor Red
+	return
+	}
 
-    # Import des utilisateurs
-    $users = Import-Csv -Path $CSVPath
-    $results = @()
+	$users = Import-Csv -Path $CSVPath -Delimiter ","
+	$results = @()
 
-    foreach ($user in $users) {
-        Write-Host "`nTraitement : $($user.FirstName) $($user.LastName)" -ForegroundColor Yellow
+	foreach ($user in $users) {
+		Write-Host "Traitement : $($user.FirstName) $($user.LastName)" -ForegroundColor Yellow
+		$params = @{
+			FirstName = $user.FirstName
+			LastName = $user.LastName
+			Department = $user.Department
+			Role = $user.Role
+			Mobile = $user.Mobile
+			GroupNumber = $GroupNumber
+		}
 
-        # Paramètres obligatoires
-        $params = @{
-            FirstName   = $user.FirstName
-            LastName    = $user.LastName
-            Department  = $user.Department
-            Role        = $user.Role
-            GroupNumber = $GroupNumber
-        }
 
-        # Paramètres optionnels
-        if ($user.Manager) { $params.Manager = $user.Manager }
-        if ($user.Mobile) { $params.Mobile = $user.Mobile }
+	if ($user.Manager) {$params.Manager = $user.Manager}
+	if ($user.Mobile) {$params.Mobile = $user.Mobile}
 
-        # Appel de la fonction de création
-        $result = New-EfreiUser @params
-        $results += $result
-    }
+	$result = New-EfreiUser @params
+	$results += $result
+	}
 
-    # Génération du rapport
-    $reportPath = "C:\Import\Import_Report_$(Get-Date -Format 'yyyyMMdd_HHmmss').csv"
-    $results | Export-Csv -Path $reportPath -NoTypeInformation
 
-    Write-Host "Import terminé. Rapport : $reportPath" -ForegroundColor Green
+
+	# Générer un rapport
+
+	$reportPath = "C:\Import\Import_Report_$(Get-Date -Format 'yyyyMMdd_HHmmss').csv"
+	$results | Export-Csv $reportPath -NoTypeInformation
+
+	Write-Host "Import terminé. Rapport : $reportPath" -ForegroundColor Green
 }
-
-
 
 
