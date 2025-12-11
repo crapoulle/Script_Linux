@@ -1,0 +1,17 @@
+groupe3@groupe3-server-ubuntu:/usr/local/bin$ sudo ./maintenance.sh
+[2025-12-11 22:15:56] ===== Début de la maintenance =====
+[2025-12-11 22:15:56] OK : Utilisation disque = 49%
+[2025-12-11 22:15:56] OK : Utilisation mémoire = 40%
+[2025-12-11 22:15:56] OK : Service ssh actif
+[2025-12-11 22:15:56] OK : Service cron actif
+[2025-12-11 22:15:56] OK : Service systemd-networkd actif
+[2025-12-11 22:15:56] Mises à jour disponibles :
+[2025-12-11 22:15:56] Nettoyage des logs anciens...
+[2025-12-11 22:15:56] Nettoyage du cache apt...
+[2025-12-11 22:15:56] Vérification des permissions critiques...
+[2025-12-11 22:15:56] Backup configuration dans /root/sys_backup_2025-12-11
+[2025-12-11 22:15:56] Simulation : envoi du rapport par email à admin@example.com
+[2025-12-11 22:15:56] Génération du tableau de bord HTML...
+[2025-12-11 22:15:56] Rapport HTML généré : /var/www/html/maintenance.html
+[2025-12-11 22:15:56] Cron déjà configuré.
+[2025-12-11 22:15:56] ===== Fin de la maintenance =====
