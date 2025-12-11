@@ -1,0 +1,6 @@
+Usage :
+./inventory.sh add <hostname> <ip> <os>
+./inventory.sh list
+./inventory.sh status <hostname> <online|offline>
+./inventory.sh report
+./inventory.sh delete <hostname>
