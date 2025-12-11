@@ -1,0 +1,50 @@
+groupe3@groupe3-server-ubuntu:/etc/netplan$ sudo ./network_setup.sh
+Sauvegarde de la configuration réseau actuelle...
+cp: target '/etc/netplan/backup/backup_2025-12-11_15-14-48.yaml': No such file or directory
+Sauvegarde effectuée.
+Nouvelle configuration appliquée.
+Application de la configuration...
+
+** (generate:525371): WARNING **: 15:14:48.360: `gateway4` has been deprecated, use default routes instead.
+See the 'Default routes' section of the documentation for more details.
+
+** (generate:525371): WARNING **: 15:14:48.361: Problem encountered while validating default route consistency.Please set up multiple routing tables and use `routing-policy` instead.
+Error: Conflicting default route declarations for IPv4 (table: main, metric: default), first declared in ens192 but also in ens192
+
+** (process:525369): WARNING **: 15:14:48.663: `gateway4` has been deprecated, use default routes instead.
+See the 'Default routes' section of the documentation for more details.
+
+** (process:525369): WARNING **: 15:14:48.663: Problem encountered while validating default route consistency.Please set up multiple routing tables and use `routing-policy` instead.
+Error: Conflicting default route declarations for IPv4 (table: main, metric: default), first declared in ens192 but also in ens192
+
+** (process:525369): WARNING **: 15:14:48.746: `gateway4` has been deprecated, use default routes instead.
+See the 'Default routes' section of the documentation for more details.
+
+** (process:525369): WARNING **: 15:14:48.747: Problem encountered while validating default route consistency.Please set up multiple routing tables and use `routing-policy` instead.
+Error: Conflicting default route declarations for IPv4 (table: main, metric: default), first declared in ens192 but also in ens192
+Test de connectivité vers 8.8.8.8...
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=112 time=5.19 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=112 time=4.77 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=112 time=4.84 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=112 time=4.76 ms
+
+--- 8.8.8.8 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 4.761/4.889/5.188/0.175 ms
+Configuration réseau actuelle :
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute
+       valid_lft forever preferred_lft forever
+2: ens192: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:0c:29:09:30:3f brd ff:ff:ff:ff:ff:ff
+    altname enp11s0
+    inet 192.168.1.33/24 brd 192.168.1.255 scope global ens192
+       valid_lft forever preferred_lft forever
+    inet6 fe80::20c:29ff:fe09:303f/64 scope link proto kernel_ll
+       valid_lft forever preferred_lft forever
+default via 192.168.1.254 dev ens192 proto static
+192.168.1.0/24 dev ens192 proto kernel scope link src 192.168.1.33
